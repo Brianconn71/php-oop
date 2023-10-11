@@ -4,16 +4,12 @@ class Product
 {
 // Best practice is to put the curly bracket opening on a new line
 
-    public $name;
-    public $price;
 
     # constructors start with a double underscore
     # constructors do whatever should always be done and done first
     # when an object of this class is made
-    public function __construct($name = 'Tom', $price = 987)
+    public function __construct(public $name = 'Tom', public $price = 987) # by adding visibility keywords we can define properties pass variables and assigned values all in one go.
     {
-        $this->name = $name;
-        $this->price = $price;
     }
 
     # function to turn price from cents into currency
